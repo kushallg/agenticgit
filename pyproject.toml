@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-git"
+version = "0.1.0"
+description = "A small educational Git-like version control system with a Gemini interface"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "google-genai>=1.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+agit = "agentic_git.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["agentic_git*"]
+
