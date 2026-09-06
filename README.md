@@ -145,12 +145,3 @@ The tests use Python's standard library and do not call Gemini:
 ```bash
 python -m unittest discover -v
 ```
-
-## Deliberate limitations
-
-- The `.agit` format cannot be read by the real `git` command.
-- Trees store repository-relative file paths in one readable JSON object.
-- File permissions, symbolic links, tags, remotes, merging, and network sync are
-  outside this small project's scope.
-- The pack format has no delta compression.
-
